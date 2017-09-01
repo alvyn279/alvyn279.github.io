@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Alvyn Le</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    	<script src="smoothScrolling.js"></script>
+		<style>
+			
+			body,h1,h2,h3,h4,h5,h6 {
+				font-family: 'Saira Semi Condensed', sans-serif;
+			}
+
+			body, html {
+			    height: 100%;
+			    color: #777;
+			    line-height: 2.1;
+			    font-size: 20px;
+			}
+			.image1, .image2, .image3 {
+				background-attachment: fixed;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+
+			}
+			.image1{
+				background-image: url(images/mountain.jpg);
+				min-height: 100%;
+
+			}
+			.image2{
+				background-image: url(images/skiing.jpg);
+				min-height: 100%;
+			}
+			.image3{
+				background-image: url(images/stars.jpg);
+				min-height: 100%;
+
+			}
+			.w3-wide {letter-spacing: 10px;}
+			.w3-hover-opacity {cursor: pointer;}
+
+			/* Turn off parallax scrolling for tablets and phones */
+			@media only screen and (max-device-width: 1024px) {
+	    		.image1, .image2, .image3 {
+	        	background-attachment: scroll;
+	   			}
+			}
+		</style>
+	</head>
+
+	<body>
+
+
+		<!-- navigation bar -->
+		<div class="w3-top">
+		  <div class="w3-bar" id="myNavbar">
+		    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+		      <i class="fa fa-bars"></i>
+		    </a>
+		    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+		    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+		    <a href="#projects" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PROJECTS</a>
+		    <a href="#coding" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-laptop"></i> CODING</a>
+		    
+		  </div>
+
+		  <!-- Navbar on small screens -->
+		  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+		    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+		    <a href="#projects" class="w3-bar-item w3-button" onclick="toggleFunction()">PROJECTS</a>
+		    <a href="#coding" class="w3-bar-item w3-button" onclick="toggleFunction()">CODING</a>
+		  </div>
+		</div>
+
+		<!-- First Parallax Image with Logo Text -->
+		<div class="image1 w3-display-container w3-opacity-min" id="home">
+		  <div class="w3-display-middle" style="white-space:nowrap;">
+		    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">ALVYN <span class="w3-hide-small">DUY-KHOI</span> LE</span>
+		  </div>
+		</div>
+
+
+		<!-- Container (About Me Section) -->
+		<div class="w3-content w3-container w3-padding-64" id="about">
+
+		  <h3 class="w3-center">About Me</h3>
+		  
+		  <div class="w3-center w3-padding-large">	      
+		       <img src="images/autoportrait.jpg" height="200px" width="200px" class="w3-circle w3-hover-grayscale" alt="Alvyn Le" style="object-fit: cover;"><br />
+		  </div>
+		  <div class="w3-hide-small w3-padding-medium">
+
+		  <p>My name is Alvyn Duy-Khoi Le and I am a second-year student at Concordia University in Software Engineering. On any sunny and non-windy day during the summer, you can find me at the tennis court. On other days, I enjoy binge watching Game of Thrones (Long Live Arya Stark). Oh yeah, sometimes I code as well.</p>
+		  	    
+		  <p>This personal website contains every last bit of information on me, myself, and I. Stalking me for some reason or another? Checking my qualifications and knowledge? Forced to visit this page? <b>Welcome to alvynle.me!</b> </p>
+		  </div>
+
+		</div>
+
+		<!--Second Parallax Image-->
+		<div class="image3 w3-display-container w3-opacity-min">
+  			<div class="w3-display-middle"  style="height: 50px;">
+    			<span class="w3-xxlarge w3-text-white w3-wide">PROJECTS</span>
+  			</div>
+		</div>
+
+
+	</body>
+
+	
+</html>
+
+
+
