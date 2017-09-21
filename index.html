@@ -13,52 +13,7 @@
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
     	<script src="smoothScrolling.js"></script>
-		<style>
-			
-			body,h1,h2,h3,h4,h5,h6 {
-				font-family: 'Saira Semi Condensed', sans-serif;
-			}
-
-			body, html {
-			    height: 100%;
-			    color: #777;
-			    line-height: 2.1;
-			    font-size: 20px;
-			}
-			.image1, .image2, .image3 {
-				background-attachment: fixed;
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: cover;
-
-			}
-			.image1{
-				background-image: url(images/mountain.jpg);
-				min-height: 100%;
-				width: 100%;
-
-			}
-			.image2{
-				background-image: url(images/skiing.jpg);
-				min-height: 100%;
-				width: 100%;
-			}
-			.image3{
-				background-image: url(images/stars.jpg);
-				min-height: 100%;
-				width: 100%;
-
-			}
-			.w3-wide {letter-spacing: 10px;}
-			.w3-hover-opacity {cursor: pointer;}
-
-			/* Turn off parallax scrolling for tablets and phones */
-			@media only screen and (max-device-width: 1024px) {
-	    		.image1, .image2, .image3 {
-	        	background-attachment: scroll;
-	   			}
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 
 	<body>
@@ -100,7 +55,7 @@
 		  <h3 class="w3-center">About Me</h3>
 		  
 		  <div class="w3-center w3-padding-large">	      
-		       <img src="images/autoportrait.jpg" height="200px" width="200px" class="w3-circle w3-hover-grayscale" alt="Alvyn Le" style="object-fit: cover;"><br />
+		       <img src="images/autoportrait.jpg" height="200px" width="200px" class="w3-circle w3-hover-grayscale objectFit" alt="Alvyn Le"><br />
 		  </div>
 		  <div class="w3-padding-medium w3-hide-small">
 
@@ -118,15 +73,15 @@
 
  		  <div class="w3-center w3-padding-medium">	
  		  	   <br />     
-		       <h3 class="w3-center"><i class="fa fa-university" style="font-size:36px"></i>&nbsp Education</h3>
-		  	   <br />
+		       <h3 class="w3-center"><i class="fa fa-university sectionTitle"></i>&nbsp Education</h3>
+		  	   <span class="w3-hide-small"><br /></span>
 		  </div>
 		       
 		   <div class="w3-container w3-hide-small">
 
 		   		<ul class="w3-ul w3-card-1">
 			       <li class="w3-row">
-					  <img src="https://www.inventis.ca/images/logo/beaubois.png" class="w3-col s3" style="width:150px; object-fit: cover; padding-right: 20px;">
+					  <img src="https://www.inventis.ca/images/logo/beaubois.png" class="w3-col s3 iconSchoolDesktop">
 					  <div class="w3-col s9">
 					    <span class="w3-large"><b>Collège Beaubois</b>&nbsp (2007-2014)</span><br>
 					    <span>Elementary and high school in Pierrefonds. I spent 7 years at this school from 5th grade to the end of my <i>Secondaire 5</i>. This is where I was introduced to programming.</span>
@@ -134,7 +89,7 @@
 				   </li>
 
 				    <li class="w3-row">
-					  <img src="http://www.vaniercollege.qc.ca/files/2014/12/logo-red.png" class="w3-col s3" style="width: 150px; object-fit: cover; padding-right:20px;">
+					  <img src="http://www.vaniercollege.qc.ca/files/2014/12/logo-red.png" class="w3-col s3 iconSchoolDesktop">
 					  <div class="w3-col s9">
 					    <span class="w3-large"><b>Vanier College</b>&nbsp (2014-2016)</span><br>
 					    <span>CEGEP institution in St-Laurent. I studied Pure & Applied Science, made great friends and met my first love here. Good times.</span>
@@ -142,7 +97,7 @@
 				   </li>
 
 				    <li class="w3-row">
-					  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Concordia_University_logo.svg/1280px-Concordia_University_logo.svg.png" class="w3-col s3" style="width: 150px; object-fit: cover; padding-right:20px;">
+					  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Concordia_University_logo.svg/1280px-Concordia_University_logo.svg.png" class="w3-col s3 iconSchoolDesktop">
 					  <div class="w3-col s9">
 					    <span class="w3-large"><b>Concordia University</b>&nbsp (2016-Present)	</span><br>
 					    <span>I started university in Mechanical Engineering, but never really enjoyed it. So after two semesters I switched to a program I knew I had an interest and passion for: Software Engineering.</span>
@@ -159,7 +114,7 @@
 				</div>
 				
 				<br />
-				<div class="w3-center"><p>&nbsp Download my CO-OP Resume &nbsp<a href="download/CV-alvyn.pdf" target="_blank"><i class="fa fa-download" style="font-size:36px"></i></a></p>
+				<div class="w3-center"><p>&nbsp Download my CO-OP Resume &nbsp<a href="download/CV-alvyn.pdf" target="_blank"><i class="fa fa-download sectionTitle"></i></a></p>
 				</div>
 
 		   </div>
@@ -169,7 +124,7 @@
 
 		   		<ul class="w3-ul w3-padding-medium w3-center">
 			       <li class="w3-row">
-					  <img src="https://www.inventis.ca/images/logo/beaubois.png" style="width:100px; object-fit: cover; padding-right: 20px;">
+					  <img src="https://www.inventis.ca/images/logo/beaubois.png" class="iconSchoolMobile">
 					  <div>
 					    <span class="w3-medium"><b>Collège Beaubois</b>&nbsp (2007-2014)</span><br>
 					    <span class="w3-medium">Elementary and high school in Pierrefonds. I spent 7 years at this school from 5th grade to the end of my <i>Secondaire 5</i>. This is where I was introduced to programming.</span>
@@ -177,7 +132,7 @@
 				   </li>
 
 				    <li class="w3-row">
-					  <img src="http://www.vaniercollege.qc.ca/files/2014/12/logo-red.png" style="width:100px; object-fit: cover; padding-right:20px;">
+					  <img src="http://www.vaniercollege.qc.ca/files/2014/12/logo-red.png" class="iconSchoolMobile">
 					  <div>
 					    <span class="w3-medium"><b>Vanier College</b>&nbsp (2014-2016)</span><br>
 					    <span class="w3-medium">CEGEP institution in St-Laurent. I studied Pure & Applied Science, made great friends and met my first love here. Good times.</span>
@@ -185,7 +140,7 @@
 				   </li>
 
 				    <li class="w3-row">
-					  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Concordia_University_logo.svg/1280px-Concordia_University_logo.svg.png" style="width:100px; object-fit: cover; padding-right:20px;">
+					  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Concordia_University_logo.svg/1280px-Concordia_University_logo.svg.png" class="iconSchoolMobile">
 					  <div>
 					    <span class="w3-medium"><b>Concordia University</b>&nbsp (2016-Present)	</span><br>
 					    <span class="w3-medium">I started university in Mechanical Engineering, but never really enjoyed it. So after two semesters I switched to a program I knew I had an interest and passion for: Software Engineering.</span>
@@ -201,7 +156,7 @@
 				  - Me.</i></p>
 				</div>
 				
-				<div class="w3-center"><p>&nbsp Download my CO-OP Resume &nbsp<a href="download/CV-alvyn.pdf" target="_blank"><i class="fa fa-download" style="font-size:36px"></i></a></p>
+				<div class="w3-center"><p>&nbsp Download my CO-OP Resume &nbsp<a href="download/CV-alvyn.pdf" target="_blank"><i class="fa fa-download sectionTitle"></i></a></p>
 				</div>
 
 		   </div>
@@ -211,7 +166,7 @@
 
 		<!--Second Parallax Image-->
 		<div class="image3 w3-display-container w3-opacity-min">
-  			<div class="w3-display-middle"  style="height: 50px;">
+  			<div class="w3-display-middle parallaxTitle">
     			<span class="w3-xxlarge w3-text-white w3-wide">PROJECTS</span>
   			</div>
 		</div>
@@ -303,7 +258,7 @@
 
 	<!--Third Parallax Image-->
 		<div class="image2 w3-display-container w3-opacity-min">
-  			<div class="w3-display-middle"  style="height: 50px;">
+  			<div class="w3-display-middle parallaxTitle">
     			<span class="w3-xlarge w3-padding-medium w3-text-white w3-black w3-wide" >CODING <div class="w3-hide-small w3-xlarge w3-padding-medium w3-text-white w3-black w3-wide">AND QUALIFICATIONS</div></span>
   			</div>
 		</div>
@@ -312,7 +267,7 @@
 		<div class="w3-content w3-container w3-padding-64" id="coding">
 
 
-			<h3 class="w3-center"><i class="fa fa-keyboard-o" style="font-size:36px"></i>&nbsp Languages and Frameworks</h3>
+			<h3 class="w3-center"><i class="fa fa-keyboard-o sectionTitle"></i>&nbsp Languages and Frameworks</h3>
 			<!-- qualifications desktop -->
 			<div class="w3-row w3-hide-small">
 				<div class="w3-col s3 w3-right-align">
@@ -335,13 +290,16 @@
 					<p>SQL</p>
 					<p>XML/JSON</p>
 					<p>Node.js</p>
+					<p>AngularJS</p>
 					<p>jQuery</p>
+
 					
 				</div>
 
 				<div class="w3-col s3 w3-center">
 					<p><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></p>
 					<p><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></p>
+					<p><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-empty"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></p>
 					<p><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-empty"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></p>
 					<p><i class="fa fa-star"></i><i class="fa fa-star-half-empty"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></p>
 				</div>
@@ -369,6 +327,7 @@
 					<p>SQL</p>
 					<p>XML/JSON</p>
 					<p>Node.js</p>
+					<p>AngularJS</p>
 					<p>jQuery</p>
 					
 				</div>
@@ -376,6 +335,7 @@
 				<div class="w3-col s3 w3-center">
 					<p><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></p>
 					<p><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></p>
+					<p><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-empty"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></p>
 					<p><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-empty"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></p>
 					<p><i class="fa fa-star"></i><i class="fa fa-star-half-empty"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></p>
 				</div>
@@ -385,7 +345,7 @@
 			<!--relevant classe desktop-->
 			<div class="w3-center w3-hide-small">
 				<br />
-				<h3><i class="fa fa-pencil-square-o" style="font-size:36px"></i> Relevant Classes Taken</h3>
+				<h3><i class="fa fa-pencil-square-o sectionTitle"></i> Relevant Classes Taken</h3>
 				<ul class="w3-ul">
 					<li ><b>COMP352</b> Data Structures and Algorithms (currently)</li>
 					<li ><b>COMP248/COMP249</b> Object-Oriented Programming I & II</li>
@@ -398,7 +358,7 @@
 			<!--mobile-->
 			<div class="w3-center w3-hide-medium w3-hide-large w3-medium">
 				<br />
-				<h3><i class="fa fa-pencil-square-o" style="font-size:36px"></i> Relevant Classes Taken</h3>
+				<h3><i class="fa fa-pencil-square-o sectionTitle"></i> Relevant Classes Taken</h3>
 				<ul class="w3-ul">
 					<li ><b>COMP352</b> Data Structures and Algorithms (currently)</li>
 					<li ><b>COMP248/COMP249</b> Object-Oriented Programming I & II</li>
