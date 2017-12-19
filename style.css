@@ -8,7 +8,7 @@
 			    line-height: 2.1;
 			    font-size: 20px;
 			}
-			.image1, .image2, .image3 {
+			.image1, .image2, .image3, .image4 {
 				background-attachment: fixed;
 				background-position: center;
 				background-repeat: no-repeat;
@@ -30,14 +30,24 @@
 				background-image: url(images/stars.jpg);
 				min-height: 100%;
 				width: 100%;
-
 			}
+			.image4{
+				background-image: url(images/hockey.jpg);
+				min-height: 100%;
+				width: 100%;
+			}
+
 			.iconSchoolDesktop{
 				padding-right: 50px;
 				padding-top: 20px;
 				width: 60px;
 				object-fit: cover;
 				
+			}
+
+			.iconWorkDesktop{
+				width: 180px;
+				padding-right: 15px;
 			}
 
 			.iconSchoolMobile{
