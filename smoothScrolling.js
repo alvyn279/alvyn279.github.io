@@ -1,8 +1,16 @@
 
 //JQuery that takes care of the smooth scrolling once the any link with tag a is clicked on the website
 //link (#XXXX) must be inserted under the href attribute
-
-$(document).ready(function(){
+// Used to be $(document).ready(function(){})
+$(window).ready(function(){
+  $("#loading_div").hide();
+  $("#loading_div").fadeIn(1500); 
+  if ($("#information").text().length == 0){
+    setTimeout(function(){
+      get_inner();
+    }, 3000);
+      
+  }
   // Add smooth scrolling to all links with tag a
   $("a").on('click', function(event) {
     //will be using the hash in order to scroll with animation until the top of thediv with id #XXXXX
@@ -28,6 +36,23 @@ $(document).ready(function(){
   });
 });
 
+
+function get_inner(){
+/* Function that animates the loading of the page
+*/  
+  $.ajax({
+      method: 'POST',
+      url: 'body.html',
+      dataType: 'html',
+      success : function(html_div){
+
+        $("#loading_div").fadeOut(200);
+        setTimeout(function(){
+          $("#information").html(html_div);
+        },700);
+      }
+   });
+}
 
 // change style of navbar as going through different sections of the website
 window.onscroll = function() {makeNavVisible()};
