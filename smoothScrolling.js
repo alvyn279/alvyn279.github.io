@@ -3,9 +3,13 @@
 //link (#XXXX) must be inserted under the href attribute
 // Used to be $(document).ready(function(){})
 $(window).ready(function(){
-
+  $("#loading_div").hide();
+  $("#loading_div").fadeIn(1500); 
   if ($("#information").text().length == 0){
-    get_inner();  
+    setTimeout(function(){
+      get_inner();
+    }, 3000);
+      
   }
   // Add smooth scrolling to all links with tag a
   $("a").on('click', function(event) {
@@ -32,17 +36,20 @@ $(window).ready(function(){
   });
 });
 
+
 function get_inner(){
-  
+/* Function that animates the loading of the page
+*/  
   $.ajax({
       method: 'POST',
       url: 'body.html',
       dataType: 'html',
       success : function(html_div){
-        $('#information').html(html_div);
-        // $('#information').load(function(){
-        //     //hide loader gif
-        // }); 
+
+        $("#loading_div").fadeOut(200);
+        setTimeout(function(){
+          $("#information").html(html_div);
+        },700);
       }
    });
 }
