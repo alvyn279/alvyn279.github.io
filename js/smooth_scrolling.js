@@ -1,4 +1,3 @@
-
 //JQuery that takes care of the smooth scrolling once the any link with tag a is clicked on the website
 //link (#XXXX) must be inserted under the href attribute
 // Used to be $(document).ready(function(){})

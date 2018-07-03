@@ -60,22 +60,22 @@ body, html {
 }
 
 .image1{
-	background-image: url(images/mountain.jpg);
+	background-image: url(../images/mountain.jpg);
 	min-height: 100%;
 	width: 100%;
 }
 .image2{
-	background-image: url(images/skiing.jpg);
+	background-image: url(../images/skiing.jpg);
 	min-height: 100%;
 	width: 100%;
 }
 .image3{
-	background-image: url(images/stars.jpg);
+	background-image: url(../images/stars.jpg);
 	min-height: 100%;
 	width: 100%;
 }
 .image4{
-	background-image: url(images/hockey.jpg);
+	background-image: url(../images/hockey.jpg);
 	min-height: 100%;
 	width: 100%;
 }
