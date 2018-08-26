@@ -40,7 +40,7 @@ function get_inner(){
 /* Function that animates the loading of the page
 */  
   $.ajax({
-      method: 'POST',
+      method: 'GET',
       url: 'body.html',
       dataType: 'html',
       success : function(html_div){
