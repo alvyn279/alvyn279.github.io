@@ -57,10 +57,15 @@ function get_inner(){
 window.onscroll = function() {makeNavVisible()};
 function makeNavVisible() {
     var navbar = document.getElementById("myNavbar");
+    var navbar_container = document.getElementById("navbar-container");
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) { //after passing 100px in terms of scroll
-        navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-white";
+      navbar_container.classList.remove('w3-white');
+      navbar_container.classList.remove('w3-opacity');  
+      navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-white";
     } else {
-        navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
+      navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
+      navbar_container.classList.add('w3-white');
+      navbar_container.classList.add('w3-opacity');
     }
 }
 

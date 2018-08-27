@@ -1,5 +1,5 @@
 body,h1,h2,h3,h4,h5,h6 {
-	font-family: 'Saira Semi Condensed', sans-serif;
+	font-family: 'Pontano Sans', sans-serif;
 }
 
 body, html {
@@ -60,22 +60,23 @@ body, html {
 }
 
 .image1{
-	background-image: url(../images/mountain.jpg);
+	background-image: url(../images/home.jpg);
 	min-height: 100%;
 	width: 100%;
+	opacity: 0.9;
 }
 .image2{
-	background-image: url(../images/skiing.jpg);
+	background-image: url(../images/bateau.jpg);
 	min-height: 100%;
 	width: 100%;
 }
 .image3{
-	background-image: url(../images/stars.jpg);
+	background-image: url(../images/kayak.jpg);
 	min-height: 100%;
 	width: 100%;
 }
 .image4{
-	background-image: url(../images/hockey.jpg);
+	background-image: url(../images/autoportrait_home.jpg);
 	min-height: 100%;
 	width: 100%;
 }
@@ -127,4 +128,8 @@ body, html {
 	.image1, .image2, .image3 , .image4{
 	background-attachment: scroll;
 	}
+}
+
+.w3-button{
+	transition: 0.4s;
 }
