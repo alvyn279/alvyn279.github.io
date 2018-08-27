@@ -133,3 +133,16 @@ body, html {
 .w3-button{
 	transition: 0.4s;
 }
+
+#follow_on {
+	color: white;
+	opacity: 0.8;
+	position: absolute;
+	top: 14em;
+	transition: transform .2s;
+}
+
+#follow_on:hover{
+	cursor: pointer;
+	transform: scale(1.4);
+}

@@ -26,15 +26,11 @@ $(window).ready(function(){
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
+      }, 800);
+
     } // End if
   });
 });
-
 
 function get_inner(){
 /* Function that animates the loading of the page
@@ -78,4 +74,11 @@ function toggleFunction() {
     } else {
         x.className = x.className.replace(" w3-show", "");
     }
+}
+
+//Scrolling to about section for a tags that were not binded to event at load time
+function async_scroll_about(){
+  $('html, body').animate({
+    scrollTop: $("#about").offset().top
+  }, 700);
 }
