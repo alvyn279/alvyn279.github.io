@@ -49,22 +49,31 @@ function get_inner(){
    });
 }
 
-// change style of navbar as going through different sections of the website
-window.onscroll = function() {makeNavVisible()};
-function makeNavVisible() {
-    var navbar = document.getElementById("myNavbar");
-    var navbar_container = document.getElementById("navbar-container");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) { //after passing 100px in terms of scroll
-      navbar_container.classList.remove('w3-white');
-      navbar_container.classList.remove('w3-opacity');  
-      navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-white";
-    } else {
-      navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
-      navbar_container.classList.add('w3-white');
-      navbar_container.classList.add('w3-opacity');
-    }
-}
+var inpage_lock = false;
 
+window.onscroll = function() {makeNavVisible()};
+
+// change style of navbar as going through different sections of the website
+function makeNavVisible() {
+  var navbar = document.getElementById("myNavbar");
+  var navbar_container = document.getElementById("navbar-container");
+  
+  if ((document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) && inpage_lock==false) { //after passing 100px in terms of scroll
+    navbar_container.classList.remove('w3-white');
+    navbar_container.classList.remove('w3-opacity');  
+    navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-white";
+    setTimeout(function(){
+      navbar.classList.remove('w3-animate-top');
+    },1000);
+    inpage_lock = true;
+  } 
+  else if ( $(document).scrollTop()  == 0) {
+    navbar.className = navbar.className.replace(" w3-card-2 w3-white", "");
+    navbar_container.classList.add('w3-white');
+    navbar_container.classList.add('w3-opacity');
+    inpage_lock = false;
+  }
+}
 
 // Used to toggle the menu on small screens when clicking on the menu button
 function toggleFunction() {
