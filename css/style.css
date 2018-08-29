@@ -15,10 +15,10 @@ body, html {
 	text-align: center;
 }
 
-#home, #experienceImage, #projectsImage, #codingImage {
+#home, #experienceImage, #projectsImage, #codingImage, #photographyImage {
 	height: 100vh;
 }
-.image1, .image2, .image3, .image4 {
+.image1, .image2, .image3, .image4, .image5{
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -80,6 +80,11 @@ body, html {
 	min-height: 100%;
 	width: 100%;
 }
+.image5{
+	background-image: url(../images/photography.jpg);
+	min-height: 100%;
+	width: 100%;	
+}
 
 .iconSchoolDesktop{
 	padding-right: 50px;
@@ -125,7 +130,7 @@ body, html {
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
-	.image1, .image2, .image3 , .image4{
+	.image1, .image2, .image3 , .image4, .image5{
 	background-attachment: scroll;
 	}
 }
@@ -137,12 +142,20 @@ body, html {
 #follow_on {
 	color: white;
 	opacity: 0.8;
-	position: absolute;
+	position: relative;
 	top: 14em;
 	transition: transform .2s;
 }
 
-#follow_on:hover{
+#follow_on_mobile {
+	color: white;
+	opacity: 0.8;
+	position: relative;
+	top: 10em;
+	transition: transform .2s;
+}
+
+#follow_on:hover, #follow_on_mobile:hover{
 	cursor: pointer;
 	transform: scale(1.4);
 }
