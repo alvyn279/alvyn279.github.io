@@ -1,3 +1,6 @@
-# personal-website
-Personal website that allows me to share information about myself: CV, experience, knowledge, general information.
-Feel free to check the progress at alvynle.me
+# Personal Website
+Personal website that allows me to share information about myself: CV, experience, knowledge, general information
+
+Stack: HTML, W3.CSS, Apache
+
+Visit me at [here](http://alvynle.me)!
