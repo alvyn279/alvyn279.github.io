@@ -1,50 +1,69 @@
-//JQuery that takes care of the smooth scrolling once the any link with tag a is clicked on the website
-//link (#XXXX) must be inserted under the href attribute
-// Used to be $(document).ready(function(){})
 $(window).ready(function(){
   $("#loading_div").hide();
-  $("#loading_div").fadeIn(1500); 
-  if ($("#information").text().length == 0){
-    setTimeout(function(){
-      get_inner();
-    }, 3000);
-      
-  }
-  // Add smooth scrolling to all links with tag a
-  $("a").on('click', function(event) {
-    //will be using the hash in order to scroll with animation until the top of thediv with id #XXXXX
+  $("#loading_div").fadeIn(1500);
 
-    // Make sure this.hash has a value before overriding default behavior
+  if ($("#information").text().length == 0){
+    getInner();
+  }
+  $("a").on('click', function(event) {
+
     if (this.hash !== "") {
-      // Prevent default anchor click behavior
       event.preventDefault();
 
-      // Store hash
       var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 800);
 
-    } // End if
+    }
   });
 });
 
-function get_inner(){
-/* Function that animates the loading of the page
-*/  
+function getInner(){
+/*
+  async fetch for resources
+*/
   $.ajax({
       method: 'GET',
       url: 'body.html',
       dataType: 'html',
       success : function(html_div){
-
-        $("#loading_div").fadeOut(200);
-        setTimeout(function(){
+        var imageURLs = ['images/home.jpg',
+                        'images/autoportrait.jpg',
+                        'images/autoportrait_home.jpg',
+                        'images/kayak.jpg',
+                        'images/bateau.jpg' 
+                      ];
+        
+        function preloadImages(imageURLs) {
+          function loadImage(src) {
+              return new Promise(function(resolve, reject) {
+                  var img = new Image();
+                  img.onload = function() {
+                      resolve(img);
+                  };
+                  img.onerror = img.onabort = function() {
+                      reject(src);
+                  };
+                  img.src = src;
+              });
+          }
+          var promises = [];
+          imageURLs.forEach(el => {
+              promises.push(loadImage(el));
+          });
+          return Promise.all(promises);
+        }
+        
+        preloadImages(imageURLs).then(function(imgs) {
+          console.log('Loaded all images' + imgs);
+          $("#loading_div").fadeOut('100');
           $("#information").html(html_div);
-        },700);
+        }, function(errImg) {
+          console.log(new Error('Error loading images'));
+          $("#loading_div").fadeOut('100');
+          $("#information").html(html_div);
+        });       
       }
    });
 }
