@@ -1,5 +1,5 @@
 $(window).ready(function() {
-    $("#loading_div").hide();
+    $("#foot").hide();
     $("#loading_div").fadeIn(1500);
 
     if ($("#information").text().length == 0) {
@@ -58,10 +58,12 @@ function getInner() {
                 console.log('Loaded all images' + imgs);
                 $("#loading_div").fadeOut('100');
                 $("#information").html(html_div);
+                $("#foot").show();
             }, (errImg) => {
                 console.log(new Error('Error loading images'));
                 $("#loading_div").fadeOut('100');
                 $("#information").html(html_div);
+                $("#foot").show();
             });
         }
     });
