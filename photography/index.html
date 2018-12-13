@@ -19,9 +19,16 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
         <link rel="icon" href="../images/pageIcon.ico" />
+        <link rel="stylesheet" href="../js/node_modules/lightgallery.js/src/css/lightgallery.css">
+        <link rel="stylesheet" href="../css/galleryStyle.css">
 
         <!-- JS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+        <script src="../js/node_modules/lightgallery.js/dist/js/lightgallery.min.js"></script>
+
+        <script src="../js/galleryController.js"></script>
+        <script src="../js/node_modules/lg-thumbnail.js/dist/lg-thumbnail.min.js"></script>
     </head>
 
     <body>
@@ -41,14 +48,49 @@
                 <span
                     class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-opacity-min w3-animate-opacity w3-hide-small"
                 >
-                    COMING SOON ...
+                    MY PHOTOGRAPHY
                 </span>
                 <span
                     class="w3-center w3-padding-large w3-black w3-medium w3-wide w3-opacity-min w3-animate-opacity w3-hide-large w3-hide-medium"
                 >
-                    COMING SOON ...
+                    MY PHOTOGRAPHY
                 </span>
             </div>
+        </div>
+
+        <div id="caption1" style="display:none;">
+            <h4>Messier 31 - Andromeda Galaxy</h4>
+            <p>My backyard, QC</p>
+        </div>
+        <div id="caption2" style="display:none;">
+            <h4>Shipwreck</h4> 
+            <p>Ile-Aux-Coudres, QC</p>
+        </div>
+        <div id="caption3" style="display:none;">
+            <h4>Milky Way Overhead <h4>
+            <p>Saint-Colomban, QC</p>
+        </div>
+        <div id="caption4" style="display:none;">
+            <h4>Small Waterfall<h4>
+            <p>Parc national des Hautes-Gorges-de-la-Rivière-Malbaie, QC</p>
+        </div>
+
+        <div class="w3-row">
+            <!-- Image height must be 112px -->
+            <ul id="gallery">
+                <li data-src="../images/dist/andromeda.jpg" data-sub-html="#caption1">
+                    <img src="../images/dist/andromeda_min.jpg" class="hoverable"/>
+                </li>
+                <li data-src="../images/dist/bateau.jpg" data-sub-html="#caption2">
+                    <img src="../images/dist/bateau_min.jpg" class="hoverable"/>
+                </li>
+                <li data-src="../images/dist/partial-milky-way.jpg" data-sub-html="#caption3">
+                    <img src="../images/dist/partial-milky-way_min.jpg" class="hoverable"/>
+                </li>
+                <li data-src="../images/dist/rocks-water-long-exposure.jpg" data-sub-html="#caption4">
+                    <img src="../images/dist/rocks-water-long-exposure_min.jpg" class="hoverable"/>
+                </li>
+            </ul>
         </div>
     </body>
 </html>
