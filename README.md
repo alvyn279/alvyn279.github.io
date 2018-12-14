@@ -1,5 +1,5 @@
 # Personal Website
-Personal website that allows me to share information about myself: CV, experience, knowledge, general information
+Personal website that allows me to share information about myself: CV, experience, and interests.
 
  - Stack:
     - HTML
@@ -8,3 +8,6 @@ Personal website that allows me to share information about myself: CV, experienc
  - Hosted on GitHub Pages
 
 Visit me [here](https://alvynle.me)!
+
+# Contact
+Contact me via email at __alvyn279@gmail.com__
