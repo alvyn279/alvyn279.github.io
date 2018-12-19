@@ -1,3 +1,4 @@
+
 $(window).ready(function() {
     $("#foot").hide();
     $("#loading_div").fadeIn(1500);
@@ -5,8 +6,8 @@ $(window).ready(function() {
     if ($("#information").text().length == 0) {
         getInner();
     }
-    $("a").on('click', function(event) {
 
+    $("a").on('click', function(event) {
         if (this.hash !== "") {
             event.preventDefault();
             var hash = this.hash;
