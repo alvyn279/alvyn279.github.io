@@ -22,6 +22,7 @@
   "dependencies": {
     "lg-fullscreen": "^1.0.1",
     "lg-thumbnail.js": "^1.1.0",
-    "lightgallery.js": "^1.1.2"
+    "lightgallery.js": "^1.1.2",
+    "jquery": ">=3.4.0"
   }
 }

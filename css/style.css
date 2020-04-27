@@ -165,3 +165,7 @@ body, html {
 .grow:hover{
 	transform: scale(1.4);
 }
+
+.ineat_image {
+	width: 100px !important;
+}
